@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{413C05A3-F3A3-4EE5-BCAC-E196C81684AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TolgaESoftware.StudentTracking.Model</RootNamespace>
+    <AssemblyName>TolgaESoftware.StudentTracking.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\Code.cs" />
+    <Compile Include="Attributes\RequiredField.cs" />
+    <Compile Include="DataTransferObject\AccrueDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\BankAccountDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\BankDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\BillDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\BranchDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ClassDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ContactDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ContactInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\CustomerDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\DiscountApplyServicesDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\DiscountDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\DiscountInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\DocumentActionsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\DocumentInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\DocumentSelectionDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\EposInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ExamInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\FamilyInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\InstitutionInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\LawyerDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\NoteInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\OverdueStatementsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\PaymentInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\PromotionInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ReceiptActionsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ReceiptDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\RefundInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ReportDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ReportsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\RoleAuthorizationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\SchoolDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ServiceDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\ServiceInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\SiblingInformationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\StudentDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\UserDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\UserParameterDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\UserUnitAuthorizationsDataTransferObject.cs" />
+    <Compile Include="DataTransferObject\VaultDataTransferObject.cs" />
+    <Compile Include="Entities\Accrue.cs" />
+    <Compile Include="Entities\Bank.cs" />
+    <Compile Include="Entities\BankAccount.cs" />
+    <Compile Include="Entities\BankBranch.cs" />
+    <Compile Include="Entities\Base\BaseActionEntity.cs" />
+    <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\Base\BaseEntityStatus.cs" />
+    <Compile Include="Entities\Base\Interfaces\IBaseActionEntity.cs" />
+    <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
+    <Compile Include="Entities\Bill.cs" />
+    <Compile Include="Entities\Branch.cs" />
+    <Compile Include="Entities\CancellationReason.cs" />
+    <Compile Include="Entities\Class.cs" />
+    <Compile Include="Entities\ClassGroup.cs" />
+    <Compile Include="Entities\ConnectionSettings.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\ContactInformations.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Discount.cs" />
+    <Compile Include="Entities\DiscountApplyServices.cs" />
+    <Compile Include="Entities\DiscountInformations.cs" />
+    <Compile Include="Entities\DiscountType.cs" />
+    <Compile Include="Entities\District.cs" />
+    <Compile Include="Entities\Document.cs" />
+    <Compile Include="Entities\DocumentInformations.cs" />
+    <Compile Include="Entities\DocumentParameters.cs" />
+    <Compile Include="Entities\EmailParameter.cs" />
+    <Compile Include="Entities\EposInformations.cs" />
+    <Compile Include="Entities\ExamInformations.cs" />
+    <Compile Include="Entities\FamilyInfo.cs" />
+    <Compile Include="Entities\FamilyInformations.cs" />
+    <Compile Include="Entities\Filter.cs" />
+    <Compile Include="Entities\ForeignLanguage.cs" />
+    <Compile Include="Entities\Guide.cs" />
+    <Compile Include="Entities\Incent.cs" />
+    <Compile Include="Entities\Institution.cs" />
+    <Compile Include="Entities\InstitutionInformations.cs" />
+    <Compile Include="Entities\Job.cs" />
+    <Compile Include="Entities\Kinship.cs" />
+    <Compile Include="Entities\Lawyer.cs" />
+    <Compile Include="Entities\NoteInformations.cs" />
+    <Compile Include="Entities\PaymentInformations.cs" />
+    <Compile Include="Entities\PaymentMethod.cs" />
+    <Compile Include="Entities\Promotion.cs" />
+    <Compile Include="Entities\PromotionInformations.cs" />
+    <Compile Include="Entities\Province.cs" />
+    <Compile Include="Entities\Quota.cs" />
+    <Compile Include="Entities\Receipt.cs" />
+    <Compile Include="Entities\ReceiptActions.cs" />
+    <Compile Include="Entities\RefundInformations.cs" />
+    <Compile Include="Entities\Report.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\RoleAuthorization.cs" />
+    <Compile Include="Entities\RoleAuthorizations.cs" />
+    <Compile Include="Entities\School.cs" />
+    <Compile Include="Entities\SchoolBus.cs" />
+    <Compile Include="Entities\Service.cs" />
+    <Compile Include="Entities\ServiceInformations.cs" />
+    <Compile Include="Entities\ServiceType.cs" />
+    <Compile Include="Entities\SiblingInformations.cs" />
+    <Compile Include="Entities\SpecialCode.cs" />
+    <Compile Include="Entities\OverdueStatements.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Term.cs" />
+    <Compile Include="Entities\TermParameter.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserParameter.cs" />
+    <Compile Include="Entities\UserUnitAuthorizations.cs" />
+    <Compile Include="Entities\Vault.cs" />
+    <Compile Include="Entities\Vocation.cs" />
+    <Compile Include="Entities\Workplace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TolgaESoftware.StudentTracking.Common\TolgaESoftware.StudentTracking.Common.csproj">
+      <Project>{BE42D5A8-23F7-4454-A108-8AF40BD06217}</Project>
+      <Name>TolgaESoftware.StudentTracking.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37C61912-34D0-4067-8803-1D31A69136A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TolgaESoftware.StudentTracking.Bll</RootNamespace>
+    <AssemblyName>TolgaESoftware.StudentTracking.Bll</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseActionBll.cs" />
+    <Compile Include="Base\BaseBll.cs" />
+    <Compile Include="Base\BaseGeneralAdminBll.cs" />
+    <Compile Include="Base\BaseGeneralBll.cs" />
+    <Compile Include="Functions\Converts.cs" />
+    <Compile Include="Functions\Crypto.cs" />
+    <Compile Include="Functions\GeneralFunctions.cs" />
+    <Compile Include="Functions\ValidationFunctions.cs" />
+    <Compile Include="General\AccrueBll.cs" />
+    <Compile Include="General\BankAccountBll.cs" />
+    <Compile Include="General\BankBll.cs" />
+    <Compile Include="General\BankBranchBll.cs" />
+    <Compile Include="General\BillBll.cs" />
+    <Compile Include="General\BranchBll.cs" />
+    <Compile Include="General\CancellationReasonBll.cs" />
+    <Compile Include="General\ClassBll.cs" />
+    <Compile Include="General\ClassGroupBll.cs" />
+    <Compile Include="General\ContactBll.cs" />
+    <Compile Include="General\ContactInformationsBll.cs" />
+    <Compile Include="General\CustomerBll.cs" />
+    <Compile Include="General\DiscountApplyServicesBll.cs" />
+    <Compile Include="General\DiscountBll.cs" />
+    <Compile Include="General\DiscountInformationsBll.cs" />
+    <Compile Include="General\DiscountTypeBll.cs" />
+    <Compile Include="General\DistrictBll.cs" />
+    <Compile Include="General\DocumentActionsBll.cs" />
+    <Compile Include="General\DocumentBll.cs" />
+    <Compile Include="General\DocumentInformationsBll.cs" />
+    <Compile Include="General\DocumentSelectionBll.cs" />
+    <Compile Include="General\EmailParameterBll.cs" />
+    <Compile Include="General\EposInformationsBll.cs" />
+    <Compile Include="General\ExamInformationsBll.cs" />
+    <Compile Include="General\FamilyInfoBll.cs" />
+    <Compile Include="General\FamilyInformationsBll.cs" />
+    <Compile Include="General\FilterBll.cs" />
+    <Compile Include="General\ForeignLanguageBll.cs" />
+    <Compile Include="General\FormReports\CollectReportBll.cs" />
+    <Compile Include="General\FormReports\DiscountDistributionReportBll.cs" />
+    <Compile Include="General\FormReports\GeneralReportBll.cs" />
+    <Compile Include="General\FormReports\IncomeDistributionReportBll.cs" />
+    <Compile Include="General\FormReports\MonthlyEnrollmentReportBll.cs" />
+    <Compile Include="General\FormReports\NetPriceReportBll.cs" />
+    <Compile Include="General\FormReports\OverdueReceivablesReportBll.cs" />
+    <Compile Include="General\FormReports\PaymentDocumentsReportBll.cs" />
+    <Compile Include="General\FormReports\PriceAndPaymentReportBll.cs" />
+    <Compile Include="General\FormReports\PriceAveragesReportBll.cs" />
+    <Compile Include="General\FormReports\TakenServiceReportBll.cs" />
+    <Compile Include="General\FormReports\VocationalGroupReportBll.cs" />
+    <Compile Include="General\GuideBll.cs" />
+    <Compile Include="General\IncentBll.cs" />
+    <Compile Include="General\InstitutionBll.cs" />
+    <Compile Include="General\InstitutionInformationsBll.cs" />
+    <Compile Include="General\JobBll.cs" />
+    <Compile Include="General\KinshipBll.cs" />
+    <Compile Include="General\LawyerBll.cs" />
+    <Compile Include="General\NoteInformationsBll.cs" />
+    <Compile Include="General\OverdueStatementsBll.cs" />
+    <Compile Include="General\PaymentInformationsBll.cs" />
+    <Compile Include="General\PaymentMethodBll.cs" />
+    <Compile Include="General\PromotionBll.cs" />
+    <Compile Include="General\PromotionInformationsBll.cs" />
+    <Compile Include="General\ProvinceBll.cs" />
+    <Compile Include="General\QuotaBll.cs" />
+    <Compile Include="General\ReceiptActionsBll.cs" />
+    <Compile Include="General\ReceiptBll.cs" />
+    <Compile Include="General\RefundInformationsBll.cs" />
+    <Compile Include="General\ReportBll.cs" />
+    <Compile Include="General\RoleAuthorizationsBll.cs" />
+    <Compile Include="General\RoleBll.cs" />
+    <Compile Include="General\SchoolBll.cs" />
+    <Compile Include="General\SchoolBusBll.cs" />
+    <Compile Include="General\ServiceBll.cs" />
+    <Compile Include="General\ServiceInformationsBll.cs" />
+    <Compile Include="General\ServiceTypeBll.cs" />
+    <Compile Include="General\SiblingInformationsBll.cs" />
+    <Compile Include="General\SpecialCodeBll.cs" />
+    <Compile Include="General\StudentBll.cs" />
+    <Compile Include="General\TermBll.cs" />
+    <Compile Include="General\TermParameterBll.cs" />
+    <Compile Include="General\UserBll.cs" />
+    <Compile Include="General\UserParameterBll.cs" />
+    <Compile Include="General\UserUnitAuthorizationsBll.cs" />
+    <Compile Include="General\VaultBll.cs" />
+    <Compile Include="General\VocationBll.cs" />
+    <Compile Include="General\WorkplaceBll.cs" />
+    <Compile Include="Interfaces\IBaseActionGeneralBll.cs" />
+    <Compile Include="Interfaces\IBaseActionSelectBll.cs" />
+    <Compile Include="Interfaces\IBaseBll.cs" />
+    <Compile Include="Interfaces\IBaseCommonBll.cs" />
+    <Compile Include="Interfaces\IBaseGeneralBll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TolgaESoftware.Dal\TolgaESoftware.Dal.csproj">
+      <Project>{9EF74519-6E3C-4BEB-B51C-161796AC6841}</Project>
+      <Name>TolgaESoftware.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TolgaESoftware.StudentTracking.Common\TolgaESoftware.StudentTracking.Common.csproj">
+      <Project>{BE42D5A8-23F7-4454-A108-8AF40BD06217}</Project>
+      <Name>TolgaESoftware.StudentTracking.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TolgaESoftware.StudentTracking.Data\TolgaESoftware.StudentTracking.Data.csproj">
+      <Project>{0D04EA94-A7A7-4B0D-AF0E-ECBA05F228F1}</Project>
+      <Name>TolgaESoftware.StudentTracking.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TolgaESoftware.StudentTracking.Model\TolgaESoftware.StudentTracking.Model.csproj">
+      <Project>{413C05A3-F3A3-4EE5-BCAC-E196C81684AE}</Project>
+      <Name>TolgaESoftware.StudentTracking.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
